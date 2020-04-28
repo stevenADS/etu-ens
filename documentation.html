@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fr">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="stylesheet"  href="app.css">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet"  href="app.css">
+<div class="header">
+    <a href="documentation.html" class="logo">documentation API</a>
+    <div class="header-right">
+      
+        <a href="connexion.php">connnexion</a>
+        <a href="index.php">inscription</a>
+   
+    </div>
+    </div>
+
+</head>
+<body>
+
+<div class="header">
+  <h1>documentation</h1>
+</div>
+
+<div class="row">
+  <div class="col-3 menu">
+    
+  </div>
+
+  <div class="col-6">
+    <h1>Information sur notre api </h1>
+  </div>
+
+  
+  <div class="col-3 right">
+    <div class="aside">
+      <h2>C'est quoi une API ?</h2>
+      <p>Une API pour application programming interface permet a deux applications de communiquer entre elles </p>
+    </div>
+  </div>
+  <style>
+    .myClass {
+      color: white;
+      background-color: purple;
+      padding: 20px;
+      text-align: center;
+      margin: 10px;
+    }
+    </style>
+
+<div class="main">
+<p>Dans le cadre de notre projet l'api permet de recuperer des informations sur chacun des etudiants inscrit grace aux formulaires.</p>
+
+<p>les liens de l'API se trouve sur : https://steven-adji.yo.fr</p>
+
+<p>Chaque etudiant a comme informations:</p>
+</div>
+<button onclick="showContent()">clique ici pour voir les infos </button>
+
+<template>
+  <div class="myClass">ID: </div>
+</template>
+
+<script>
+var myArr = ["nom", "prenom", "mail", "filiere", "groupe", "image"];
+
+function showContent() {
+  var temp, item, a, i;
+  //get the template element:
+  temp = document.getElementsByTagName("template")[0];
+  //get the DIV element from the template:
+  item = temp.content.querySelector("div");
+  //for each item in the array:
+  for (i = 0; i < myArr.length; i++) {
+    //Create a new node, based on the template:
+    a = document.importNode(item, true);
+    //Add data from the array:
+    a.textContent += myArr[i];
+    //append the new node wherever you like:
+    document.body.appendChild(a);
+  }
+}
+</script>
+
+<article>
+    <h2>les commandes </h2>
+   <li>   <h3>l'option ALL </h3> </li>
+    <p>Recupere toutes les filieres , le groupe, les etudiants</p>
+   <li>Paramètres:api.php?cle=*cle*&all=1<li>
+   
+  All: 1 => la commande pour tout afficher.
+  </article>
+  
+  
+  <article>
+    <h2>Étudiants</h2>
+   <li> <p>Requête: api.php?:key=*key*&filiere=*filiere*</p></li>
+  </article>
+  
+  
+  <article>
+    <h2>groupe</h2>
+   <li> <p>Requête: api.php?:key=*key*&groupe=*groupe*</p></li>
+  </article>
+</body>
+</html>
