@@ -1,12 +1,10 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>inscription</title>
-</head>
-<body>
-<?php
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>login</title>
+		<meta charset="utf-8" />
+	<body>
+		    <?php
 function inscription(){
 	if (isset($_GET['email'])){
 	$contenu=file('etu.csv');
@@ -27,7 +25,8 @@ function inscription(){
 		
 
         $Fecriture= fopen("etu.csv", "a");
-		fwrite($Fecriture, $_GET['nom'].";".$_GET['prenom'].";".$_GET['email'].";".md5($_GET['email'].$_GET['password']).";".$_GET['filiere'].";".$_GET['groupe']."\n");
+	fwrite($Fecriture, $_GET['nom'].";".$_GET['prenom'].";".$_GET['email'].";".md5($_GET['email'].$_GET['password']).";".$_GET['filiere'].";".$_GET['groupe'].";"."\n");
+
 		fclose($Fecriture);	
 	   	echo "Utilisateur enregistré.";	    
 	        
@@ -38,9 +37,7 @@ function inscription(){
 inscription();
 
 ?>
-
-
-
-</body>
+	</body>
+</head>
 </html>
 

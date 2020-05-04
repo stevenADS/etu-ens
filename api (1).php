@@ -39,8 +39,8 @@ function ApiCle($verif){
 }
 $apiCle=$_GET['key'];
 if(ApiCle($apiCle)){
-	$etu=api($_GET['filliere'], $_GET['groupe']);
-	$json= jason($etu);
+	$data=api($_GET['filliere'], $_GET['groupe']);
+	$json= jason($data);
 }
 else{
 	$erreur="mauvaise cle";
