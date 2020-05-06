@@ -209,7 +209,46 @@ html {
   }
 }
 
-
-.p{
-  text-align: end;
 }
+nav {
+  height: 100%;
+  width: 300px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 18px;
+}
+
+nav a,nav p {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+}
+nav p{
+  text-decoration: none;
+  margin-top: 60%;
+  font-size: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

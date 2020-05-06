@@ -1,0 +1,103 @@
+<?php
+session_start();
+function logs(){
+  $date = "[".date('d')."/".date('m')."/".date('y')."] ";
+  $hour = "[".date('H').":".date('i').":".date('s')."] ";
+  $ip = $_SERVER['REMOTE_ADDR'];
+  $url = $_SERVER['PHP_SELF'];
+  $answer = $date.$hour.$ip." connecte to ".$url."\n";
+
+  $files = fopen('./data/logs/logs.txt', 'a+');
+  fputs($files,$answer);
+  fclose($files);
+}
+logs();
+?>
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Connexion</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="subpage">
+
+		<!-- Header -->
+			<header id="header">
+				<div class="inner">
+					<a href="index.html" class="logo"><strong>Projet</strong> Trombinoscope</a>
+					<nav id="nav">
+						<a href="index.html">Accueil</a>
+						<a href="connexion.php">Connexion</a>
+						<a href="inscription.php">Inscription</a>
+					</nav>
+					<a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+				</div>
+			</header>
+        
+    </div>
+    </div>
+</head>
+<body>
+    
+
+	<table align="center">
+            <tr>		
+                <td width="80%">
+                    <fieldset class ="carte">
+                
+                        <legend><h2>Connexion</h2> </legend> 
+                        <div>
+
+
+	<form  method="get" action="login.php">
+
+			<table>
+
+			<td><br><label>Entrer votre :</label></td>
+			<tr>
+				<td><input placeholder="Votre email" type="text" name="email"/></td>
+			</tr>
+
+			<td><br><label>Mot de passe :</label></td>
+			<tr>
+				<td><input placeholder="Votre mot de passe" type="password" name="password"/></td>
+				<br>
+			</tr>
+
+			</table>
+			<br><br>
+
+			<input type="submit" name="valider" value="Se connecter" id="button"/>					   
+		</form>
+
+		<br><br>
+		<a href="inscription.php">S'inscrire</a>
+		<br><br><br>
+
+		</div>
+
+	</body>
+</html>
+
+
+				</div>
+
+			</section>
+
+		<!-- Footer -->
+			<footer id="footer">
+			Tous droits réservés. Copyright © 2019-2020 <br>
+			<p> Steven AD</p>
+			</footer>
+
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

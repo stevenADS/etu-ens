@@ -1,0 +1,69 @@
+{
+    "LesFilieres":[
+
+        {
+            "Filiere":"L1-MIPI",
+            "groupes":[
+                "A1",
+                "B2",
+                "LPI-1",
+                "LPI-2",
+                "LPI-3"
+            ]
+        },
+
+        {
+            "Filiere":"LI-MIPI",
+            "groupes":[
+                "A1",
+                "B2",
+                "LPI-1",
+                "LPI-2",
+                "LPI-3"
+            ]
+        },
+        {
+        	"Filiere":"L2-MI",
+            "groupes":[
+                "A1",
+                "B2",
+                "LPI-1",
+                "LPI-2",
+                "LPI-3"
+            ]
+        },
+        {
+        	"Filiere":"L3-I",
+            "groupes":[
+                "A1",
+                "B2",
+                "LPI-1",
+                "LPI-2",
+                "LPI-3"
+            ]
+        },
+        {
+            "Filiere":"LP-RS",
+            "groupes":[
+                "A1",
+                "B2",
+                "LPI-1",
+                "LPI-2",
+                "LPI-3"
+            ]
+        },
+        {
+            "Filiere":"LP-WS",
+            "groupes":[
+                "A1",
+                "B2",
+                "LPI-1",
+                "LPI-2",
+                "LPI-3"
+            ]
+        }
+
+    ]
+    
+}
+
